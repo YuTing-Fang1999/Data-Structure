@@ -1,0 +1,19 @@
+H 2
+S A
+D 2
+D 9
+D 6
+S 5
+C K
+C J
+H 5
+
+H 2
+S A
+D 3
+D 2
+H 5
+
+D 3
+H J
+H Q

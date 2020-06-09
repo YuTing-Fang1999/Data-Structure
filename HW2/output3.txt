@@ -1,0 +1,6 @@
+straight flush :
+S 10 A K Q J 
+
+full house : 
+888 
+66 88 99 KK 
