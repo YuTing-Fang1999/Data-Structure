@@ -1,0 +1,16 @@
+15
+D 6
+C 8
+H 2 
+H K
+S 10 
+S A 
+S J 
+D 8
+C 9
+H 6
+S K 
+S Q
+H 5 
+H 9 
+S 8 

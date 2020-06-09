@@ -1,0 +1,12 @@
+11
+D 7
+D 8
+D J
+H 9
+H 10
+H 8
+S J
+S Q
+S 8
+C K
+C A
