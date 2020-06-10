@@ -29,7 +29,8 @@ if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 ```
 # 網路packet傳送
 <img src="https://i.imgur.com/FL5L9aC.png" width="600">   
-直接模擬封包傳送   
+直接模擬封包傳送      
+
 ```cpp
 //初始化路徑 (最短路徑)
 	for(int i=0;i<deliverNum;++i){
