@@ -27,7 +27,7 @@ if(dis[j]>dis[i]+map[i][j]){ //如果原本的距離 > 經由i到達的距離
 ```cpp
 if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 ```
-# 網路packet傳送
+# 4 網路packet傳送
 <img src="https://i.imgur.com/FL5L9aC.png" width="600">   
 直接模擬封包傳送      
 
