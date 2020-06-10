@@ -33,9 +33,9 @@
 ```
 # 5
 ### 最短路徑
-使用dijkstra
-找離原點最近的點v依序更新其他點w
-如果經由v到w的距離會小於目前到w的距離就更新disTo\[w\]
+使用dijkstra  
+找離原點最近的點v依序更新其他點w  
+如果經由v到w的距離會小於目前到w的距離就更新disTo\[w\]  
 ```java
 public class DijkstraSP
 {
@@ -45,11 +45,12 @@ public class DijkstraSP
 
    public DijkstraSP(EdgeWeightedDigraph G, int s)
    {
+   	//初始化
       edgeTo = new DirectedEdge[G.V()];
       distTo = new double[G.V()];
       pq = new IndexMinPQ<Double>(G.V());
 
-      for (int v = 0; v < G.V(); v++) 
+      for (int v = 0; v < G.V(); v++) //初始距離無限大
          distTo[v] = Double.POSITIVE_INFINITY;
       distTo[s] = 0.0;
 
@@ -57,7 +58,7 @@ public class DijkstraSP
       while (!pq.isEmpty())
       {
           int v = pq.delMin();
-          for (DirectedEdge e : G.adj(v))
+          for (DirectedEdge e : G.adj(v)) //更新與v相連的節點的距離
              relax(e);
       }
     }
@@ -65,12 +66,12 @@ public class DijkstraSP
  private void relax(DirectedEdge e)
    {
       int v = e.from(), w = e.to();
-      if (distTo[w] > distTo[v] + e.weight())
+      if (distTo[w] > distTo[v] + e.weight()) 如果經由v到w的距離會小於目前到w的距離就更新disTo[w]
       {
           distTo[w] = distTo[v] + e.weight();
-          edgeTo[w] = e;
-          if (pq.contains(w)) pq.decreaseKey(w, distTo[w]);
-          else                pq.insert     (w, distTo[w]);
+          edgeTo[w] = e; //用來求路徑的，此題只求距離所以可省略
+          if (pq.contains(w)) pq.decreaseKey(w, distTo[w]); //如果pq裡已有w就更新
+          else                pq.insert     (w, distTo[w]); //放入pq
       }       
    }
 
