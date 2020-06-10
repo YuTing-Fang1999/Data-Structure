@@ -28,7 +28,7 @@ if(dis[j]>dis[i]+map[i][j]){ //如果原本的距離 > 經由i到達的距離
 if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 ```
 # 網路packet傳送
-<img src="https://i.imgur.com/FL5L9aC.png" width="600">
+<img src="https://i.imgur.com/FL5L9aC.png" width="600">   
 直接模擬封包傳送   
 ```cpp
 //初始化路徑 (最短路徑)
@@ -56,7 +56,7 @@ if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 # 5
 目前有i個componenet   
 找出刪掉j個點之後能變成i+j個component的點   
-<img src="https://i.imgur.com/75jQVf3.png" width="600">
+<img src="https://i.imgur.com/75jQVf3.png" width="600">  
 直接從排列組合窮舉從刪1個點到刪V個點的組合   
 使用[tarjan](https://blog.csdn.net/hurmishine/article/details/75248876)找component   
 這科雖說是資料結構，但我完全沒用到資料結構呢==，依舊是一推陣列，可怕    
