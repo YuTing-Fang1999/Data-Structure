@@ -33,24 +33,24 @@ if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 
 ```cpp
 //初始化路徑 (最短路徑)
-	for(int i=0;i<deliverNum;++i){
-		findShortestPath(deliver[i]-1,i);
-	}
-	//模擬packet走法，每while一次代表過一秒 
-	while(!done()){
-		for(int i=0;i<deliverNum;++i){ //所有node都執行動作
-			if(!isInTar[i]){ //如果還沒到終點
-				if(!isInNode(i)){ 如果不在node的buffer裡
-					go(i); //前進
-				}
+for(int i=0;i<deliverNum;++i){
+	findShortestPath(deliver[i]-1,i);
+}
+//模擬packet走法，每while一次代表過一秒 
+while(!done()){
+	for(int i=0;i<deliverNum;++i){ //所有node都執行動作
+		if(!isInTar[i]){ //如果還沒到終點
+			if(!isInNode(i)){ 如果不在node的buffer裡
+				go(i); //前進
 			}
 		}
-		goBuffer(); //每個node都處理1單位的buffer
 	}
-	//print tar buffer
-	for(int i=qHead[tar+1];i<qTail[tar+1];++i){
-		printf("%d ",buffer[tar+1][i]);
-	}
+	goBuffer(); //每個node都處理1單位的buffer
+}
+//print tar buffer
+for(int i=qHead[tar+1];i<qTail[tar+1];++i){
+	printf("%d ",buffer[tar+1][i]);
+}
 ```
 
 這是還沒用struct和class所寫的code，超多陣列，可怕==   
