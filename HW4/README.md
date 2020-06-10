@@ -53,12 +53,12 @@ if(dis[j]>dis[i]+map[i][j]) return 0; //代表有負環
 ```
 這是還沒用struct和class所寫的code，超多陣列，可怕==  
 # 5
-目前有i個componenet  
-找出刪掉j個點之後能變成i+j個component的點
+目前有i個componenet   
+找出刪掉j個點之後能變成i+j個component的點  
 <img src="https://i.imgur.com/75jQVf3.png" width="600">
-直接從排列組合窮舉從刪1個點到刪V個點的組合  
-使用[tarjan](https://blog.csdn.net/hurmishine/article/details/75248876)找component  
-這科雖說是資料結構，但我完全沒用到資料結構呢==，依舊是一推陣列，可怕   
-當初只是想把結果搞出來就行了，沒注意這麼多
+直接從排列組合窮舉從刪1個點到刪V個點的組合   
+使用[tarjan](https://blog.csdn.net/hurmishine/article/details/75248876)找component   
+這科雖說是資料結構，但我完全沒用到資料結構呢==，依舊是一推陣列，可怕    
+當初只是想把結果搞出來就行了，沒注意這麼多   
 
 
